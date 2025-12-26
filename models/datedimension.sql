@@ -17,7 +17,8 @@ with cte as(
          THEN 'RAINY'
          WHEN MONTH(TO_TIMESTAMP(STARTED_AT)) in (9,10,11)
          THEN 'WINTER'
-    END AS SEASON         
+    END AS SEASON,
+    {{function1('STARTED_AT')}}         
 
     from
 
